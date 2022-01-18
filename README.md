@@ -1,2 +1,3 @@
 # wantedClone
-wanted clone page
+
+url: https://elegant-wescoff-5404ec.netlify.app/
