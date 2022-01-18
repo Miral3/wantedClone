@@ -265,8 +265,8 @@ const Banner = () => {
     arrows: false,
     centerMode: true,
     variabbleWidth: true,
-    // autoplay: true,
-    // autoplaySpeed: 4000,
+    autoplay: true,
+    autoplaySpeed: 4000,
   };
 
   return (
