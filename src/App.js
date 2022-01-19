@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import './app.css'
 
 import { AiOutlineSearch } from "react-icons/ai";
 import { VscBell } from "react-icons/vsc";
@@ -52,20 +53,22 @@ const NavTop = styled.div`
   align-items: center;
   justify-content: space-between;
   @media screen and (min-width: 768px) and (max-width: 991px) {
-    height: 30px;
+    height: 60px;
     width: 100%;
     padding: 15px 0;
   }
   @media screen and (max-width: 767px) {
-    height: 30px;
+    height: 60px;
     width: 100%;
     padding: 15px 20px;
   }
   .burger__logo {
     display: flex;
     align-items: center;
+    button {
+      background: none;
+    }
     .burger {
-      margin-top: -2px;
       margin-right: 15px;
       img {
         width: 17px;
@@ -76,8 +79,9 @@ const NavTop = styled.div`
     }
     .logo {
       color: #333333;
+      font-family: "Mulish-Bold";
       font-size: 22px;
-      font-weight: 700;
+      letter-spacing: -1px;
       margin-bottom: 5px;
     }
   } 
@@ -112,14 +116,18 @@ const NavMenu = styled.ul`
     }
     .state {
       position: absolute;
-      top: 7px;
-      right: -10px;
+      top: 3px;
+      right: -8px;
       font-size: 10px;
       color: #3466FF;
       @media screen and (min-width: 992px) and (max-width: 1100px) {
+        top: 8px;
         right: -20px;
       }
     }
+  }
+  .selected {
+    box-shadow: inset 0 -2px #258bf7;
   }
   a {
     position: relative;
@@ -184,6 +192,9 @@ const NavAside = styled.div`
           border-radius: 5px;
           @media screen and (max-width: 1199px) {
             left: 15px;
+          }
+          @media screen and (max-width: 992px) {
+            left: 20px;
           }
           .state {
             color: white;
@@ -310,7 +321,6 @@ const Padding = styled.div`
 const Body = styled.div`
   background-color: #fff;
   display: block;
-  box-sizing: border-box;
   @media screen and (min-width: 1200px) {
     padding-top: 25px;
   }
@@ -331,7 +341,7 @@ const App = () => {
               </div>
             </NavTop>
             <NavMenu>
-              <li className='hidden'>
+              <li className='hidden selected'>
                 <a href='/'>홈</a>
               </li>
               <li className='default'>
